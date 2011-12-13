@@ -1,0 +1,9 @@
+src_files:
+  - "feathercache.coffee"
+helpers:
+  - "helpers/spec_helper.coffee"
+  - "helpers/jquery.min.js"
+spec_files:
+  - "feathercache_spec.coffee"
+src_dir: src
+spec_dir: spec

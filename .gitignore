@@ -1,0 +1,5 @@
+.jhw-cache/*
+!.gitkeep
+.DS_Store
+*.bak
+.com.apple.timemachine.supported

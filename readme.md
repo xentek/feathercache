@@ -5,9 +5,9 @@ A super-lightweight json cache for your mobile web apps.
 ## Features 
   - Provides a thin wrapper around html5 localStorage.
   - Complex data (objects, arrays, et al) are seralized with JSON.stringify so you can store virtually anything.
-    - This data is JSON.parse'd on the way out for you too. You're welcome!
-  - Written in coffescript **☕**
-  - Fully unit tested with jasmine
+  - This data is JSON.parse'd on the way out for you too. You're welcome!
+  - Written in coffescript. 
+  - Fully unit tested with jasmine.
 
 ## Requirements
   - jQuery 1.4+

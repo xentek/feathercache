@@ -1,5 +1,5 @@
 ###
-FeatherCache v0.1
+FeatherCache v0.2
 Released under the MIT License
 Copyright (c) 2011 Eric Marden
 More Info: http://github.com/xentek/feathercache
@@ -31,5 +31,5 @@ root.FeatherCache = class FeatherCache
   fetch: (key, source) ->
     data = ($.getJSON source)
     response = data.responseText
-    @set(key,response)
+    @store.setItem(key, JSON.stringify response)
     response

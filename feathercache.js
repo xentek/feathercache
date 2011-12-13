@@ -1,6 +1,6 @@
 (function() {
   /*
-  FeatherCache v0.1
+  FeatherCache v0.2
   Released under the MIT License
   Copyright (c) 2011 Eric Marden
   More Info: http://github.com/xentek/feathercache
@@ -35,7 +35,7 @@
       var data, response;
       data = $.getJSON(source);
       response = data.responseText;
-      this.set(key, response);
+      this.store.setItem(key, JSON.stringify(response));
       return response;
     };
     return FeatherCache;

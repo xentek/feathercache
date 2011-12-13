@@ -29,7 +29,7 @@ root.FeatherCache = class FeatherCache
     null
 
   fetch: (key, source) ->
-    data = ($.getJSON 'http://graph.facebook.com/nggyu')
+    data = ($.getJSON source)
     response = data.responseText
     @set(key,response)
     response

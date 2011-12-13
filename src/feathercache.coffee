@@ -1,3 +1,10 @@
+###
+FeatherCache v0.1
+Released under the MIT License
+Copyright (c) 2011 Eric Marden
+More Info: http://github.com/xentek/feathercache
+###
+
 root = global ? window
 root.FeatherCache = class FeatherCache 
   constructor: (options) ->

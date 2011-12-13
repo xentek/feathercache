@@ -7,7 +7,7 @@ A super-lightweight json cache for your mobile web apps.
   - Complex data (objects, arrays, et al) are seralized with JSON.stringify so you can store virtually anything.
   - This data is JSON.parse'd on the way out for you too. You're welcome!
   - Written in coffescript. 
-  - Fully unit tested with jasmine.
+  - Fully unit tested with Jasmine.
 
 ## Requirements
   - jQuery 1.4+
@@ -32,7 +32,7 @@ console.log(nggyu);
 ## Contributing
 
  - Fork the repository
- - Change the code, and send a pull request
+ - Modify `src/feathercache.coffee`, and send me pull request
  - Bonus points for adding specs for the new feature/bug fix!
  - Or just [submit an issue](https://github.com/xentek/feathercache/issues) and I'll see what I can do
 

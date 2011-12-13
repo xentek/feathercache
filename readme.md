@@ -4,7 +4,7 @@ A super-lightweight json cache for your mobile web apps.
 
 ## Features 
   - Provides a thin wrapper around html5 localStorage.
-  - Written in coffescript ☕
+  - Written in coffescript **☕**
   - Fully unit tested with jasmine
 
 ## Requirements
@@ -34,7 +34,7 @@ console.log('nggyu');
  - Bonus points for adding specs for the new feature/bug fix!
  - Or just [submit an issue](https://github.com/xentek/feathercache/issues) and I'll see what I can do
 
-### License
+## License
 
 Copyright (c) 2011 Eric Marden 
 

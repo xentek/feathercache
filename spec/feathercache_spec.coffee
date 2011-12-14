@@ -3,8 +3,8 @@ describe 'FeatherCache', ->
   beforeEach ->
     localStorage.clear()
     @fc = new FeatherCache({key_prefix: 'xen:'})
-    @response = { status: 200, responseText: {"id": "31392432135","name": "Never Gonna Give You Up","picture": "http://profile.ak.fbcdn.net/hprofile-ak-snc4/50495_31392432135_7012_s.jpg","link": "http://www.facebook.com/nggyu","likes": 62767,"category": "Movies/music","website": "http://rickrolling.com","username": "nggyu","founded": "Rick Astley","talking_about_count": 9} }
-    spyOn($,'getJSON').andReturn(@response)
+    @response = { status: 200, responseText: '{"id": "31392432135","name": "Never Gonna Give You Up","picture": "http://profile.ak.fbcdn.net/hprofile-ak-snc4/50495_31392432135_7012_s.jpg","link": "http://www.facebook.com/nggyu","likes": 62767,"category": "Movies/music","website": "http://rickrolling.com","username": "nggyu","founded": "Rick Astley","talking_about_count": 9}' }
+    spyOn($,'ajax').andReturn(@response)
 
   it "should set options when instantiated", ->
     (expect @fc.key_prefix).toBe('xen:')
@@ -36,11 +36,12 @@ describe 'FeatherCache', ->
 
   it "should fetch items from a json api", ->
     api_data = @fc.fetch('nggyu', 'http://graph.facebook.com/nggyu')
-    (expect $.getJSON).toHaveBeenCalledWith('http://graph.facebook.com/nggyu')
+    (expect $.ajax).toHaveBeenCalledWith('http://graph.facebook.com/nggyu', {async: false, dataType: 'json', type: 'get'})
 
   it "should return responseText", ->
     api_data = @fc.fetch('nggyu', 'http://graph.facebook.com/nggyu')
-    (expect api_data.name).toBe('Never Gonna Give You Up')
+    obj = JSON.parse api_data
+    (expect obj.name).toBe('Never Gonna Give You Up')
 
   it "should fetch and store data from a json api", ->
     api_data = @fc.fetch('nggyu', 'http://graph.facebook.com/nggyu')

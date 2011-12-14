@@ -1,4 +1,4 @@
-# ☁ Feather Cache v0.2
+# ☁ Feather Cache v0.3
 
 A super-lightweight json cache for your mobile web apps.
 

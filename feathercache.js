@@ -1,6 +1,6 @@
 (function() {
   /*
-  FeatherCache v0.2
+  FeatherCache v0.3
   Released under the MIT License
   Copyright (c) 2011 Eric Marden
   More Info: http://github.com/xentek/feathercache
@@ -32,11 +32,14 @@
       return null;
     };
     FeatherCache.prototype.fetch = function(key, source) {
-      var data, response;
-      data = $.getJSON(source);
-      response = data.responseText;
-      this.store.setItem(key, JSON.stringify(response));
-      return response;
+      var data;
+      data = $.ajax(source, {
+        async: false,
+        dataType: 'json',
+        type: 'get'
+      });
+      this.store.setItem(key, data.responseText);
+      return data.responseText;
     };
     return FeatherCache;
   })();

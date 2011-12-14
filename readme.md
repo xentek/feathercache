@@ -36,6 +36,10 @@ console.log(nggyu);
  - Bonus points for adding specs for the new feature/bug fix!
  - Or just [submit an issue](https://github.com/xentek/feathercache/issues) and I'll see what I can do
 
+## Special Thanks
+
+  - Shout out to my man, [Andrew Terris](http://twitter.com/aterris). You know what you did.
+ 
 ## License
 
 Copyright (c) 2011 Eric Marden 
